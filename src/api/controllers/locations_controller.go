@@ -7,7 +7,7 @@ import (
 )
 
 func GetCountry(c *gin.Context) {
-	country, err := services.GetCountry("country_id")
+	country, err := services.LocationsService.GetCountry("country_id")
 	if err != nil {
 		c.JSON(err.Status, err)
 		return
